@@ -235,11 +235,11 @@ p {
 
 /* Styling container untuk card kegiatan */
 .kegiatan-container {
-    margin: 0px 120px 0px;
+    margin: 0px 50 0px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 50px;
 }
 
 /* Styling setiap card kegiatan */
@@ -247,7 +247,7 @@ p {
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 400px;
     height: 500px;
     padding: 20px;
     text-align: center;
@@ -259,9 +259,9 @@ p {
 }
 
 .card .icon img {
-    width: 200px;
-    height: 100px;
-    max-height: 100px; 
+    width: 350px;
+    height: 200px;
+    max-height: 300px; 
     object-fit: cover;
     margin-bottom: 20px;
     border-radius: 5px;
