@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+@keyframes rotate {
+    100% {
+        background-position: 15% 50%;
+    }
+}
+
+:root {
+    --color-primary: #7656f0;
+    --color-secondary: #8B4513;
+    --background-overlay: rgba(0, 0, 0, 0.35);
+}
+
+body {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    height: 100vh;
+    padding: 0 24px;
+    background-color: var(--color-primary);
+    background-image: url('Pakem Bongkaran.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Euclid Circular A", sans-serif;
+    color: #f9f9f9;
+    animation: rotate 6s infinite alternate linear;
+    position: relative;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: var(--background-overlay);
+}
+
+.login-container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 70px 30px 44px;
+    border-radius: 20px;
+    background-color: rgba(249, 249, 249, 0.66);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
+
+@media (min-width: 448px) {
+    .login-card {
+        width: 70%;
+        min-width: 400px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .login-card {
+        padding: 0 44px;
+        width: 50%;
+        height: 100%;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* Logo styling */
+.login-card .logo {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 200px;
+    height: auto;
+}
+
+/* Heading styling */
+.login-container h2 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: var(--color-secondary);
+    font-family: 'Times New Roman', Times, serif; /* Menggunakan Times New Roman */
+}
+
+.login-container h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 48px;
+    color: var(--color-secondary);
+    font-family: 'Times New Roman', Times, serif; /* Menggunakan Times New Roman */
+}
+
+/* Form styling */
+.login-form {
+    display: grid;
+    gap: 16px;
+    width: 100%;
+}
+
+.login-form > input {
+    height: 56px;
+    border-radius: 6px;
+    border: 0;
+    padding: 0 16px;
+    font-family: 'Times New Roman', Times, serif; /* Menggunakan Times New Roman */
+    font-size: 16px;
+    color: #f9f9f9;
+    background-color: #999492;
+}
+
+.login-form > input::placeholder {
+    color: rgba(255, 255, 255, 0.38);
+}
+
+.login-form > input:focus {
+    outline: 2px solid var(--color-primary);
+}
+
+.login-form > button {
+    height: 56px;
+    border-radius: 6px;
+    border: 0;
+    padding: 0 16px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: var(--color-secondary);
+    color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.375s;
+}
+
+.login-form > button:hover {
+    background-color: darken(var(--color-secondary), 10%);
+}
+
+/* Link styling */
+.login-form > a {
+    font-size: 16px;
+    color: var(--color-secondary);
+    text-align: left;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+.login-form > a:hover {
+    text-decoration: underline;
+}
